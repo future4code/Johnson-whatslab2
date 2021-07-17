@@ -2,4 +2,4 @@
 
    ### Dupla: 
       * André Luiz Gomes Pereira
-      * Anderson Leite Heidrich
+      * Anderson Heidrich Leite
