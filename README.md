@@ -1,3 +1,5 @@
-### Projeto WhatsLab
-  * Dupla: André Luiz Gomes Pereira
-           Anderson Leite Heidrich
+# Projeto WhatsLab
+
+   ### Dupla: 
+      * André Luiz Gomes Pereira
+      * Anderson Leite Heidrich
