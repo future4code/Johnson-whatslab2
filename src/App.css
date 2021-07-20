@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100%;
+}
+
+.chat-main {
+  max-width: 86%;
+  margin: auto;
+  background-color: white;
+  min-height: 86vh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  border-radius: 16px;
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 230px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 4px;
+  display: flex;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #4664ff;
   color: white;
+  transform: scale(1.04);
 }
 
-.App-link {
-  color: #61dafb;
+.btn i {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+  border-right: 1px solid #ebe7fb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn span {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
