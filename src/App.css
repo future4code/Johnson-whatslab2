@@ -15,15 +15,17 @@ body {
   height: 100%;
 }
 
+
+/* Estilização do componente App.js */
 .chat-main {
-  max-width: 86%;
+  max-width: 90%;
   margin: auto;
   background-color: white;
-  min-height: 86vh;
+  min-height: 80vh;
   width: 100%;
   padding: 20px;
   display: flex;
-  border-radius: 16px;
+  padding-left: 0;
 }
 
 .btn {
