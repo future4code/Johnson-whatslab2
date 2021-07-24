@@ -15,7 +15,7 @@ export default class ListaChat extends Component {
     {
       key:2,
       image:
-        "https://img2.gratispng.com/20180605/jay/kisspng-computer-icons-avatar-user-profile-5b16409fd8f963.4008572815281849918887.jpg",
+        "https://scontent.fcrq2-1.fna.fbcdn.net/v/t31.18172-8/12356707_940357002667115_7641512045968635110_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=bhnk1Lf5dRkAX9Qs1_h&_nc_ht=scontent.fcrq2-1.fna&oh=91bbb9690a7ef1c64b5b775281331338&oe=6120A5D5",
       name: "Anderson Leite",
       active: true,
       isOnline: true,
@@ -26,7 +26,7 @@ export default class ListaChat extends Component {
         "https://media-exp1.licdn.com/dms/image/C4D03AQE1Umh4490qiA/profile-displayphoto-shrink_200_200/0/1625855121342?e=1632355200&v=beta&t=99yn6GBClvGsS_uDLePN9XEWaTfxFj2xILGtwDqFUic",
       name: "Gabriela Fogaça",
       active: true,
-      isOnline: false,
+      isOnline: true,
     },
   ];
 

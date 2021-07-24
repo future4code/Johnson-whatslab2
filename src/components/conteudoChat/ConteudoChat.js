@@ -3,6 +3,7 @@ import React, { Component, useState, createRef, useEffect } from "react";
 import "./conteudoChat.css";
 import Avatar from "../listaChat/Avatar";
 import ChatItem from "./itemChat";
+import { getByText } from "@testing-library/react";
 
 export default class ConteudoChat extends Component {
   messagesEndRef = createRef(null);
@@ -10,7 +11,7 @@ export default class ConteudoChat extends Component {
     {
       key: 1,
       image:
-        "https://img2.gratispng.com/20180605/jay/kisspng-computer-icons-avatar-user-profile-5b16409fd8f963.4008572815281849918887.jpg",
+        "https://scontent.fcrq2-1.fna.fbcdn.net/v/t31.18172-8/12356707_940357002667115_7641512045968635110_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=bhnk1Lf5dRkAX9Qs1_h&_nc_ht=scontent.fcrq2-1.fna&oh=91bbb9690a7ef1c64b5b775281331338&oe=6120A5D5 ",
       type: "",
       msg: "E aí André, Como vai vc?",
     },
@@ -19,42 +20,7 @@ export default class ConteudoChat extends Component {
       image:
         "https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo",
       type: "other",
-      msg: "Eu to bem velhinho.",
-    },
-    {
-      key: 3,
-      image:
-        "https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo",
-      type: "other",
-      msg: "E vc como ta?",
-    },
-    {
-      key: 4,
-      image:
-        "https://img2.gratispng.com/20180605/jay/kisspng-computer-icons-avatar-user-profile-5b16409fd8f963.4008572815281849918887.jpg",
-      type: "",
-      msg: "Estou bem graças a Deus.",
-    },
-    {
-      key: 5,
-      image:
-        "https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo",
-      type: "other",
-      msg: "E o nosso projeto hein?",
-    },
-    {
-      key: 6,
-      image:
-        "https://img2.gratispng.com/20180605/jay/kisspng-computer-icons-avatar-user-profile-5b16409fd8f963.4008572815281849918887.jpg",
-      type: "",
-      msg: "Pois é né velho, ta osso!",
-    },
-    {
-      key: 7,
-      image:
-        "https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo",
-      type: "other",
-      msg: "Eu estou vendo alguns tutoriais para ver se desenrolo",
+      msg: "Eu to bem meu amigo.",
     },
   ];
 
@@ -63,8 +29,12 @@ export default class ConteudoChat extends Component {
     this.state = {
       chat: this.chatItms,
       msg: "",
+      image: "",
     };
   }
+
+  
+   
 
   scrollToBottom = () => {
     this.messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -75,14 +45,15 @@ export default class ConteudoChat extends Component {
       if (e.keyCode == 13) {
         if (this.state.msg != "") {
           this.chatItms.push({
-            key: 3,
+            key: 0,
             type: "",
             msg: this.state.msg,
-            image: {}
+            image: '',
           });
           this.setState({ chat: [...this.chatItms] });
           this.scrollToBottom();
           this.setState({ msg: "" });
+          this.setState({image: ''})
         }
       }
     });
@@ -99,10 +70,10 @@ export default class ConteudoChat extends Component {
           <div className="blocks">
             <div className="current-chatting-user">
               <Avatar
-                isOnline="active"
-                image="https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo"
+                isOnline=""
+                image="https://uploads-ssl.webflow.com/5e790d30d198385b09366d8f/5eab0f1225c2d474a92656df_fav2_LabeNu_.png"
               />
-              <p>André Luiz</p>
+              <p>Turma Johnson - Labenu</p>
             </div>
           </div>
 
@@ -132,9 +103,6 @@ export default class ConteudoChat extends Component {
         </div>
         <div className="content__footer">
           <div className="sendNewMessage">
-            <button className="addFiles">
-              <i className="fa fa-plus"></i>
-            </button>
             <input
               type="text"
               placeholder="Digite a mensagem aqui"
