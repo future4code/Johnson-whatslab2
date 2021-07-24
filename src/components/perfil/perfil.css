@@ -87,6 +87,7 @@
   .profile__card.open .card__content {
     display: block;
   }
-  .profile__card.open .card__header i:before {
+
+  .profile__card.open  i:before {
     content: "\f106";
   }
