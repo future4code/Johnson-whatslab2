@@ -19,8 +19,8 @@ class ListaItens extends Component {
     return (
       <div
         style={{ animationDelay: `0.${this.props.animationDelay}s` }}
-        onClick={this.selcionarChat}
-        className={`lista-tem ${this.props.active ? this.props.active : ""}`}
+        onClick={this.selecionarChat}
+        className={`lista-item ${this.props.active ? this.props.active : ""}`}
       >
         <Avatar
           image={
@@ -30,7 +30,7 @@ class ListaItens extends Component {
         />
         <div className="userMeta">
           <p>{this.props.name}</p>
-          <span className="activeTime">32 mins jul</span>
+          <span className="activeTime">32 mins</span>
         </div>
       </div>
     );
