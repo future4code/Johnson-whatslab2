@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ListaItens from "./ListaItens";
 import "./listaChat.css";
 
-class ListaChat extends Component {
+export default class ListaChat extends Component {
   todosUsuarios = [
     {
       image:
@@ -30,8 +30,8 @@ class ListaChat extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todosChats: this.state.todosUsuarios,
-    };
+      todosChats: this.todosUsuarios,
+    }
   }
 
   render() {
@@ -73,5 +73,3 @@ class ListaChat extends Component {
     );
   }
 }
-
-export default ListaChat;
