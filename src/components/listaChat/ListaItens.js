@@ -16,6 +16,10 @@ class ListaItens extends Component {
     event.currentTarget.classList.add("active");
   };
   render() {
+    let data = new Date();
+    let dataFormatada =
+      data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
+    
     return (
       <div
         style={{ animationDelay: `0.${this.props.animationDelay}s` }}
@@ -30,7 +34,7 @@ class ListaItens extends Component {
         />
         <div className="userMeta">
           <p>{this.props.name}</p>
-          <span className="activeTime">32 mins</span>
+          <span className="activeTime">{dataFormatada}</span>
         </div>
       </div>
     );

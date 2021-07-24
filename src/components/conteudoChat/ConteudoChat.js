@@ -75,11 +75,10 @@ export default class ConteudoChat extends Component {
       if (e.keyCode == 13) {
         if (this.state.msg != "") {
           this.chatItms.push({
-            key: 1,
+            key: 3,
             type: "",
             msg: this.state.msg,
-            image:
-              "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+            image: {}
           });
           this.setState({ chat: [...this.chatItms] });
           this.scrollToBottom();
@@ -120,7 +119,7 @@ export default class ConteudoChat extends Component {
             {this.state.chat.map((itm, index) => {
               return (
                 <ChatItem
-                  animationDelay={index + 2}
+                  animationDelay={index + 1}
                   key={itm.key}
                   user={itm.type ? itm.type : "me"}
                   msg={itm.msg}

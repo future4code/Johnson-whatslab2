@@ -5,6 +5,7 @@ import "./listaChat.css";
 export default class ListaChat extends Component {
   todosUsuarios = [
     {
+      key: 1,
       image:
         "https://media-exp1.licdn.com/dms/image/C4D03AQErUeVcdJ06zg/profile-displayphoto-shrink_200_200/0/1601901713243?e=1632355200&v=beta&t=TOp1AFF2YUZG6C3D-Spk5BEERn3uu0plYufOBHzztVo",
       name: "André Luiz",
@@ -12,6 +13,7 @@ export default class ListaChat extends Component {
       isOnline: true,
     },
     {
+      key:2,
       image:
         "https://img2.gratispng.com/20180605/jay/kisspng-computer-icons-avatar-user-profile-5b16409fd8f963.4008572815281849918887.jpg",
       name: "Anderson Leite",
@@ -19,6 +21,7 @@ export default class ListaChat extends Component {
       isOnline: true,
     },
     {
+      key:3,
       image:
         "https://media-exp1.licdn.com/dms/image/C4D03AQE1Umh4490qiA/profile-displayphoto-shrink_200_200/0/1625855121342?e=1632355200&v=beta&t=99yn6GBClvGsS_uDLePN9XEWaTfxFj2xILGtwDqFUic",
       name: "Gabriela Fogaça",
@@ -39,10 +42,10 @@ export default class ListaChat extends Component {
       <div className="lista">
         <button className="botao">
           <i className="fa fa-plus-square"></i>
-          <span>Nova Conversa</span>
+          <span>Novo usuário</span>
         </button>
         <div className="lista-cabecalho">
-          <h2>Conversas</h2>
+          <h2>Usuários</h2>
           <button className="botao2">
             <i className="fa fa-ellipsis-h"></i>
           </button>
