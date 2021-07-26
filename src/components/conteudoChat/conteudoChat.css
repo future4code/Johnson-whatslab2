@@ -1,5 +1,8 @@
 .main__chatcontent {
     flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     padding: 20px 40px;
     max-width: 63%;
     border-right: 1px solid #ebe7fb;
@@ -103,6 +106,9 @@
     color: #d1d1d1;
   }
   .content__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding-top: 30px;
   }
   .sendNewMessage {

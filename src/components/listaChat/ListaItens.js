@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Avatar from "./Avatar";
 
 class ListaItens extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
+
   selecionarChat = (event) => {
     for (
       let index = 0;
@@ -14,12 +13,16 @@ class ListaItens extends Component {
       event.currentTarget.parentNode.children[index].classList.remove("active");
     }
     event.currentTarget.classList.add("active");
+
+    this.props.perfilEscolhido(this.props.item)
   };
+
+
   render() {
     let data = new Date();
     let dataFormatada =
       data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
-    
+
     return (
       <div
         style={{ animationDelay: `0.${this.props.animationDelay}s` }}
