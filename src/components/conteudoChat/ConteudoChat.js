@@ -13,7 +13,7 @@ export default class ConteudoChat extends Component {
         "https://scontent.fcrq2-1.fna.fbcdn.net/v/t31.18172-8/12356707_940357002667115_7641512045968635110_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=bhnk1Lf5dRkAX9Qs1_h&_nc_ht=scontent.fcrq2-1.fna&oh=91bbb9690a7ef1c64b5b775281331338&oe=6120A5D5 ",
       type: "other",
       msg: "Boa noite turma Johnson!",
-    }
+    },
   ];
 
   constructor(props) {
@@ -50,6 +50,21 @@ export default class ConteudoChat extends Component {
     this.setState({ msg: e.target.value });
   };
 
+  botaoEnviar = () => {
+    if (this.state.msg !== "") {
+      this.chatItms.push({
+        key: 0,
+        type: this.props.usuarioSelecionado.type,
+        msg: this.state.msg,
+        image: this.props.usuarioSelecionado.image,
+      });
+      this.setState({ chat: [...this.chatItms] });
+      this.scrollToBottom();
+      this.setState({ msg: "" });
+      this.setState({ image: "" });
+    }
+  };
+
   render() {
     return (
       <div className="main__chatcontent">
@@ -65,8 +80,7 @@ export default class ConteudoChat extends Component {
           </div>
 
           <div className="blocks">
-            <div className="settings">
-            </div>
+            <div className="settings"></div>
           </div>
         </div>
         <div className="content__body">
@@ -93,7 +107,11 @@ export default class ConteudoChat extends Component {
               onChange={this.onStateChange}
               value={this.state.msg}
             />
-            <button onClick={this.componentDidMount} className="btnSendMsg" id="sendMsgBtn">
+            <button
+              onClick={this.botaoEnviar}
+              className="btnSendMsg"
+              id="sendMsgBtn"
+            >
               <i className="fa fa-paper-plane"></i>
             </button>
           </div>
